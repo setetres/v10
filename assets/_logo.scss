@@ -1,0 +1,73 @@
+.logo {
+    display: flex;
+    height: calc(var(--font-size) * 2.5);
+    margin: 0 0 var(--setetres-font-weight) 0;
+    pointer-events: none;
+    position: relative;
+    transform: scale(.5) translateX(calc(var(--font-size) * -1)) translateY(calc(var(--font-size) * -1));
+    transition: transform calc(var(--transition-timing) * 2) var(--transition-easing);
+    width: calc(var(--font-size) * 2.5);
+
+    @include media-breakpoint-up(xl) {
+        height: var(--font-size);
+        transform: scale(.5) translateX(calc(var(--font-size) * -1)) translateY(calc(var(--font-size) * -1));
+        width: var(--font-size);
+    }
+
+    &__icon {
+        @extend %background-blob-black;
+
+        align-items: center;
+        display: flex;
+        height: calc(var(--font-size) * 2.5);
+        justify-content: center;
+        position: relative;
+        width: calc(var(--font-size) * 2.5);
+
+        @include media-breakpoint-up(xl) {
+            height: var(--font-size);
+            width: var(--font-size);
+        }
+    }
+
+    &__icon-dots {
+        width: calc(var(--font-size) * 1.2);
+        z-index: 2;
+
+        @include media-breakpoint-up(xl) {
+            width: calc(var(--font-size) / 2);
+        }
+
+        path {
+            fill: var(--color-background);
+            transition: fill var(--transition-timing) var(--transition-easing);
+        }
+    }
+
+    &__text {
+        pointer-events: none;
+        position: absolute;
+        visibility: hidden;
+        white-space: nowrap;
+    }
+
+    a {
+        @extend %cursor-link;
+
+        align-items: center;
+        display: flex;
+        height: calc(var(--font-size) * 2.5);
+        outline: none;
+        text-decoration: none;
+        width: calc(var(--font-size) * 2.5);
+
+        @include media-breakpoint-up(xl) {
+            height: var(--font-size);
+            width: var(--font-size);
+        }
+    }
+
+    &--active {
+        transform: scale(1);
+    }
+}

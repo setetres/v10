@@ -1,0 +1,11 @@
+.section--about {
+    opacity: 1;
+
+    .cover {
+        align-items: center;
+
+        &__signature {
+            text-shadow: calc(var(--letter-spacing) * -1) calc(var(--letter-spacing) * -1) 0 var(--color-background);
+        }
+    }
+}

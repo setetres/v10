@@ -1,0 +1,128 @@
+@import url('https://use.typekit.net/ilw8ltp.css');
+@import 'ooo/ooo';
+@import 'about';
+@import 'archive';
+@import 'cover';
+@import 'dark-mode';
+@import 'footer';
+@import 'frame';
+@import 'game';
+@import 'inkstarter';
+@import 'link';
+@import 'logo';
+@import 'menu';
+@import 'mncrft';
+@import 'placeholder';
+@import 'reveal';
+@import 'scrollbar';
+@import 'section';
+@import 'setetres';
+
+:root {
+    --color-foreground: #000000;
+    --color-background: #ffffff;
+    --color-black: #000000;
+    --color-white: #ffffff;
+    --color-primary: #00c08b;
+    --color-secondary: #777777;
+    --color-tertiary: #ff0030;
+    --font-monospaced: ocr-a-std, monospace;
+    --font-size: 4.2vw;
+    --font-text: neue-haas-grotesk-text, sans-serif;
+    --gutter: calc(var(--setetres-font-weight) + var(--setetres-font-weight-half));
+    --letter-spacing: .1vw;
+    --setetres-font-weight: 2.5vw;
+    --setetres-font-weight-half: 1.25vw;
+    --spacer-0: 0; // 0px
+    --spacer-1: .1875rem; // 3px
+    --spacer-2: .375rem; // 6px
+    --spacer-3: .75rem; // 12px
+    --spacer-4: 1.5rem; // 24px
+    --spacer-5: 3rem; // 48px
+    --spacer-6: 6rem; // 96px
+    --spacer-7: 12rem; // 192px
+    --spacer-8: 24rem; // 384px
+    --transition-timing: 500ms;
+    --transition-easing: cubic-bezier(.2, 1, .2, 1);
+}
+
+html,
+body {
+    background-color: var(--color-background);
+    overflow: hidden;
+    user-select: none;
+}
+
+body {
+    @extend %cursor-default;
+
+    color: var(--color-black);
+    font-family: var(--font-text);
+    font-size: var(--font-size);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5;
+
+    @include media-breakpoint-up(xl) {
+        font-size: calc(var(--font-size) / 2);
+    }
+}
+
+.nuxt-progress {
+    @extend %background-waves;
+
+    z-index: 1;
+}
+
+.application {
+    background-color: var(--color-background);
+    min-height: 100vh;
+    transition: background-color var(--transition-timing) var(--transition-easing);
+}
+
+.gutter {
+    display: flex;
+    flex: 1;
+    margin: calc(var(--setetres-font-weight) + var(--setetres-font-weight-half));
+}
+
+.embed {
+    display: block;
+    margin-bottom: var(--setetres-font-weight);
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+
+    &::before {
+        content: '';
+        display: block;
+    }
+
+    iframe,
+    embed,
+    object,
+    video {
+        border: 0;
+        width: 100%;
+    }
+
+    &--ratio {
+        padding-top: 56.25%;
+
+        iframe,
+        embed,
+        object,
+        video {
+            border: 0;
+            bottom: 0;
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+        }
+    }
+}
+
+._w-100 {
+    width: 100%;
+}

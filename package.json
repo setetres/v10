@@ -1,0 +1,47 @@
+{
+    "name": "setetres-v10",
+    "version": "1.0.0",
+    "description": "v10.0 of my website.",
+    "author": {
+        "name": "Guilherme Pangnotta",
+        "url": "http://setetres.st"
+    },
+    "private": true,
+    "config": {
+        "nuxt": {
+            "port": "7373"
+        }
+    },
+    "scripts": {
+        "dev": "nuxt",
+        "build": "nuxt build",
+        "start": "nuxt start",
+        "generate": "nuxt generate",
+        "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+        "lintfix": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
+        "stylelint": "stylelint ./assets --fix"
+    },
+    "dependencies": {
+        "@nuxtjs/axios": "^5.9.5",
+        "locomotive-scroll": "^3.3.11",
+        "nuxt": "^2.12.0",
+        "skinview3d": "^2.0.0-alpha.1"
+    },
+    "devDependencies": {
+        "autoprefixer": "^9.7.4",
+        "babel-eslint": "^10.1.0",
+        "eslint": "^6.8.0",
+        "eslint-config-prettier": "^6.10.0",
+        "eslint-loader": "^3.0.3",
+        "eslint-plugin-prettier": "^3.1.2",
+        "eslint-plugin-vue": "^6.2.2",
+        "lodash": "4.17.15",
+        "node-sass": "^4.13.1",
+        "normalize.css": "^8.0.1",
+        "sass-loader": "^8.0.2",
+        "stylelint": "^13.2.1",
+        "stylelint-config-standard": "^20.0.0",
+        "stylelint-order": "^4.0.0",
+        "stylelint-webpack-plugin": "^1.2.3"
+    }
+}

@@ -1,0 +1,86 @@
+.game {
+    color: var(--color-background);
+    font-family: var(--font-monospaced);
+    font-size: var(--font-size);
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    text-transform: uppercase;
+    top: 0;
+    width: 100%;
+
+    @include media-breakpoint-up(xl) {
+        font-size: calc(var(--font-size) / 2);
+    }
+
+    &::after {
+        @extend %background-stripes;
+
+        bottom: 0;
+        content: '';
+        display: block;
+        left: 0;
+        opacity: .15;
+        pointer-events: none;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .link {
+        color: var(--color-secondary);
+
+        &:not(.link--button) {
+            &:hover {
+                color: var(--color-background);
+            }
+
+            &:focus {
+                color: var(--color-secondary);
+            }
+        }
+    }
+
+    &__panel {
+        color: var(--color-secondary);
+        display: flex;
+        justify-content: space-between;
+        left: 0;
+        opacity: 1;
+        padding: var(--gutter);
+        position: absolute;
+        text-align: center;
+        top: 0;
+        width: 100%;
+    }
+
+    &__info {
+        bottom: 0;
+        color: var(--color-secondary);
+        display: flex;
+        left: 0;
+        opacity: 1;
+        padding: var(--gutter);
+        pointer-events: none;
+        position: absolute;
+        width: 100%;
+
+        .ooo-row {
+            > div {
+                margin-top: var(--setetres-font-weight);
+            }
+        }
+    }
+
+    canvas {
+        display: block;
+        height: 100%;
+        image-rendering: -moz-crisp-edges;
+        image-rendering: -webkit-crisp-edges;
+        image-rendering: pixelated;
+        image-rendering: crisp-edges;
+        object-fit: cover;
+        width: 100%;
+    }
+}

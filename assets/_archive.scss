@@ -1,0 +1,24 @@
+.section--archive {
+    opacity: 1;
+
+    img {
+        display: block;
+        filter: grayscale(1);
+        height: auto;
+        margin-bottom: var(--setetres-font-weight);
+        transition: filter var(--transition-timing) var(--transition-easing);
+        width: 100%;
+
+        &:hover {
+            filter: grayscale(0);
+        }
+    }
+
+    .ooo-container-fluid {
+        width: 100%;
+    }
+
+    .frame {
+        margin-bottom: calc(var(--setetres-font-weight) + var(--setetres-font-weight-half));
+    }
+}

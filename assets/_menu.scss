@@ -1,0 +1,42 @@
+.menu {
+    font-size: calc(var(--font-size) * 2);
+    line-height: 1.2;
+
+    @include media-breakpoint-up(xl) {
+        font-size: var(--font-size);
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    a {
+        align-items: center;
+        display: flex;
+        text-decoration: none;
+    }
+
+    sup {
+        align-self: flex-start;
+        background-color: var(--color-tertiary);
+        color: var(--color-white);
+        display: flex;
+        font-size: var(--setetres-font-weight);
+        line-height: 1;
+        margin-left: var(--setetres-font-weight-half);
+        min-height: 0;
+        min-width: 0;
+        padding: calc(var(--setetres-font-weight-half) / 3) calc(var(--setetres-font-weight-half) / 3);
+        text-decoration: none;
+        top: var(--setetres-font-weight-half);
+        vertical-align: super;
+
+        @include media-breakpoint-up(xl) {
+            font-size: var(--setetres-font-weight-half);
+            margin-left: calc(var(--setetres-font-weight-half) / 2);
+            top: calc(var(--setetres-font-weight-half) / 1.5);
+        }
+    }
+}

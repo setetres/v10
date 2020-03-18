@@ -1,0 +1,40 @@
+.section {
+    color: var(--color-foreground);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    width: 100vw;
+    z-index: 2;
+
+    p {
+        margin-bottom: var(--setetres-font-weight);
+        margin-top: 0;
+    }
+
+    &__title {
+        font-size: calc(var(--font-size) * 2);
+        letter-spacing: calc(var(--letter-spacing) * -1);
+        line-height: 1.2;
+
+        @include media-breakpoint-up(xl) {
+            font-size: var(--font-size);
+        }
+    }
+
+    &__signature {
+        @extend %signature;
+
+        font-size: calc(var(--font-size) * 2);
+        line-height: 1;
+        text-transform: lowercase;
+
+        @include media-breakpoint-up(xl) {
+            font-size: var(--font-size);
+        }
+    }
+
+    &--loading {
+        opacity: 0;
+    }
+}

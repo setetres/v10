@@ -1,0 +1,34 @@
+.scrollbar {
+    @extend %cursor-scroll;
+
+    height: 100vh;
+    opacity: 1;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform-origin: center right;
+    transition: opacity var(--transition-timing) var(--transition-easing);
+    width: var(--gutter);
+    z-index: 100;
+
+    &_thumb {
+        background-color: var(--color-secondary);
+        left: auto;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transition: width var(--transition-timing) var(--transition-easing);
+        width: 50%;
+    }
+
+    &:hover {
+        .scrollbar_thumb {
+            width: 100%;
+        }
+    }
+
+    &--active {
+        opacity: 1;
+    }
+}
