@@ -10,6 +10,7 @@
                 </div>
             </div>
         </div>
+        <Footer />
         <div class="gutter _d-flex _justify-content-between _align-items-center _mb-0">
             <p>
                 <span class="section__signature">Find Yourself</span>
@@ -22,10 +23,12 @@
 </template>
 <script>
     import LocomotiveScroll from '~/mixins/locomotive-scroll.js'
+    import Footer from '~/components/footer.vue'
 
     export default {
 
         components: {
+            Footer
         },
 
         mixins: [
@@ -42,21 +45,12 @@
         mounted() {
             this.$nextTick(() => {
                 document.querySelector('.footer').classList.remove('footer--loading')
-
-                setTimeout(function() {
-                    document.querySelector('.logo').classList.add('logo--active')
-                    document.querySelector('.dark-mode').classList.add('dark-mode--active')
-                }, 250)
             })
         },
 
         beforeRouteLeave(to, from, next) {
-            document.querySelector('.scrollbar').classList.remove('scrollbar--active')
-
             document.querySelector('.logo').classList.remove('logo--active')
             document.querySelector('.footer').classList.add('footer--loading')
-            document.querySelector('.scrollbar').classList.remove('scrollbar--active')
-
             next()
         },
 
