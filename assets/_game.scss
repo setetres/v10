@@ -50,9 +50,12 @@
         opacity: 1;
         padding: var(--gutter);
         position: absolute;
-        text-align: center;
         top: 0;
         width: 100%;
+
+        .ooo-row {
+            flex: 1;
+        }
     }
 
     &__info {
@@ -67,6 +70,8 @@
         width: 100%;
 
         .ooo-row {
+            flex: 1;
+
             > div {
                 margin-top: var(--setetres-font-weight);
             }

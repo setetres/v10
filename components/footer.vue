@@ -6,10 +6,10 @@
                     <div class="game__panel">
                         <div class="ooo-row">
                             <div class="ooo-col-6">
-                                <a id="game__panel-button-1" href="#" class="link link--external game__panel-button">Ø</a>
+                                <div id="game__panel-button-1" class="link link--external game__panel-button">Ø</div>
                             </div>
                             <div class="ooo-col-6">
-                                <a id="game__panel-button-2" href="#" class="link link--external game__panel-button">Reset</a>
+                                <div id="game__panel-button-2" class="link link--external game__panel-button">Reset</div>
                             </div>
                         </div>
                     </div>
@@ -287,14 +287,12 @@
 
                 startButton.addEventListener('click', function() {
                     gameOfLife.gg()
-                    return false
                 })
 
                 resetWorld.addEventListener('click', function() {
                     gameOfLife.reset()
                     gameOfLife.randomDraft()
                     gameOfLife.gg()
-                    return false
                 })
 
                 /*eslint-enable */
