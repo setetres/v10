@@ -4,7 +4,7 @@
     margin: 0 0 var(--setetres-font-weight) 0;
     pointer-events: none;
     position: relative;
-    transform: scale(.5) translateX(calc(var(--font-size) * -1)) translateY(calc(var(--font-size) * -1));
+    transform: scale(.5) translateX(calc(var(--font-size) * -2)) translateY(calc(var(--font-size) * -2));
     transition: transform calc(var(--transition-timing) * 2) var(--transition-easing);
     width: calc(var(--font-size) * 2.5);
 

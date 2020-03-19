@@ -287,12 +287,14 @@
 
                 startButton.addEventListener('click', function() {
                     gameOfLife.gg()
+                    return false
                 })
 
                 resetWorld.addEventListener('click', function() {
                     gameOfLife.reset()
                     gameOfLife.randomDraft()
                     gameOfLife.gg()
+                    return false
                 })
 
                 /*eslint-enable */
