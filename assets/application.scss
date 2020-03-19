@@ -49,8 +49,11 @@
 html,
 body {
     background-color: var(--color-background);
-    overflow: hidden;
     user-select: none;
+
+    &.has-scroll-smooth {
+        overflow: hidden;
+    }
 }
 
 body {
