@@ -74,7 +74,7 @@
                                 Stats
                             </p>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas malesuada tellus eu mi interdum sit amet, consectetur.
+                                Voting was open for 30 days:
                             </p>
                             <div class="ooo-row">
                                 <div class="ooo-col-6">
