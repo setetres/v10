@@ -5,7 +5,6 @@
 @import 'cover';
 @import 'dark-mode';
 @import 'footer';
-@import 'frame';
 @import 'game';
 @import 'inkstarter';
 @import 'link';
@@ -46,28 +45,35 @@
     --transition-easing: cubic-bezier(.2, 1, .2, 1);
 }
 
-html,
-body {
-    background-color: var(--color-background);
+html {
+    background-color: var(--color-white);
     user-select: none;
 
-    &.has-scroll-smooth {
-        overflow: hidden;
+    body {
+        @extend %cursor-default;
+
+        color: var(--color-black);
+        font-family: var(--font-text);
+        font-size: var(--font-size);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.5;
+
+        @include media-breakpoint-up(xl) {
+            font-size: calc(var(--font-size) / 2);
+        }
     }
-}
 
-body {
-    @extend %cursor-default;
+    &.has-scroll-init {
+        body {
+            overflow: auto;
+        }
 
-    color: var(--color-black);
-    font-family: var(--font-text);
-    font-size: var(--font-size);
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.5;
-
-    @include media-breakpoint-up(xl) {
-        font-size: calc(var(--font-size) / 2);
+        &.has-scroll-smooth {
+            body {
+                overflow: hidden;
+            }
+        }
     }
 }
 
