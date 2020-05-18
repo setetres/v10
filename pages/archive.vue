@@ -70,7 +70,7 @@
 
         head() {
             return {
-                title: 'Sete Três — Archive'
+                title: 'Sete Três — v10'
             }
         }
     }

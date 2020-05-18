@@ -112,7 +112,7 @@
 
         head() {
             return {
-                title: 'Sete Três — About'
+                title: 'Sete Três — v10'
             }
         }
     }

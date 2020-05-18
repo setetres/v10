@@ -23,7 +23,7 @@
 
         head() {
             return {
-                title: 'Sete Três'
+                title: 'Sete Três — v10'
             }
         }
     }
